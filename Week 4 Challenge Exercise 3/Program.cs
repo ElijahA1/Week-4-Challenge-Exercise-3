@@ -9,12 +9,13 @@
         }
         static void reverseString(char[] myString) 
         {
-            int firstIndex = 0;
+            int lastIndex = myString.Length - 1;
+            //int firstIndex = 0;
 
-            for (int i = myString.Length -1 ; i > myString.Length/2; i--) 
+            for (int i = 0 ; i < myString.Length/2; i++) 
             {
-                (myString[i], myString[firstIndex]) = (myString[firstIndex], myString[i]);
-                firstIndex++;
+                (myString[i], myString[lastIndex]) = (myString[lastIndex], myString[i]);
+                lastIndex--;
             }
             Console.WriteLine();
             foreach (char c in myString) {Console.Write(c); }
